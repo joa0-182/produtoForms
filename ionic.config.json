@@ -1,0 +1,7 @@
+{
+  "name": "FormularioApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
