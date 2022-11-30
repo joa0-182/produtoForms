@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="centralizarTexto"><strong>Cadastro</strong></ion-label>
+    </ion-item>
+    <form [formGroup]="formCadastro">
+      <ion-item>
+        <ion-label position="floating">Nome:</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
+      <ng-container *ngFor="let erro of mensagensErro.nome">
+        <span class="msg-erro" *ngIf="nome?.errors?.[erro.tipo] && (nome?.dirty || nome?.touched)">
+          {{erro.aviso}}
+        </span>
+      </ng-container>
+      <!--fim-->
+      <ion-item>
+        <ion-label position="floating">Descrição:</ion-label>
+        <ion-input formControlName="descricao"></ion-input>
+      </ion-item>
+      <ng-container *ngFor="let erro of mensagensErro.descricao">
+        <span class="msg-erro" *ngIf="descricao?.errors?.[erro.tipo] && (descricao?.dirty || descricao?.touched)">
+          {{erro.aviso}}
+        </span>
+      </ng-container>
+      <!--fim-->
+      <ion-item counter="true" fill="clear">
+        <ion-label position="floating">Validade:</ion-label>
+        <ion-input type="date" placeholder="" formControlName="validade"></ion-input>
+      </ion-item>
+      <ng-container *ngFor="let erro of mensagensErro.validade">
+        <span class="msg-erro" *ngIf="validade?.errors?.[erro.tipo] && (validade?.dirty || validade?.touched)">
+          {{erro.aviso}}
+        </span>
+      </ng-container>
+      <!--fim-->
+      <ion-item>
+        <ion-label position="floating">Preço:</ion-label>
+        <ion-input formControlName="preco"></ion-input>
+      </ion-item>
+      <ng-container *ngFor="let erro of mensagensErro.preco">
+        <span class="msg-erro" *ngIf="preco?.errors?.[erro.tipo] && (preco?.dirty || preco?.touched)">
+          {{erro.aviso}}
+        </span>
+      </ng-container>
+      <!--fim-->
+    </form>
+  </ion-list>
+
+<ion-grid>
+  <ion-row>
+    <ion-button expand="full" (click)="salvar()"><u>Registrar</u></ion-button>
+  </ion-row>
+</ion-grid>
+</ion-content>
