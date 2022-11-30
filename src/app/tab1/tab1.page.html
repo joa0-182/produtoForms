@@ -9,9 +9,20 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-item *ngFor="let prdt of listaCadastros">
-    <ion-label>{{prdt.nome}}</ion-label>
-    <label>{{prdt.descricao}}</label>
+  <ion-button (click)="buscarProdutos()" color="dark" expand="block" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >
+    CADASTRAR NOVO PRODUTO
+  </ion-button>
+  <ion-item *ngFor="let produto of listaCadastros">
+    <ion-label>
+      <h2>{{produto.nome}}</h2>
+      <p class="descricao">{{produto.descricao}}</p>
+      <ion-label class="datapreco">
+        <span>{{produto.validade  | date }}</span>
+        <span class="preco">{{produto.preco | currency : 'BRL'}}</span>
+      </ion-label>
+      <!-- <ion-button (click)="deletar(produto)" hidden>Deletar</ion-button> -->
+    </ion-label>
+
   </ion-item>
 
 </ion-content>
