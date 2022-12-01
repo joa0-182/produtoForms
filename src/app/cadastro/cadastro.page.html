@@ -4,14 +4,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
   <ion-list>
     <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <img alt="Silhouette of mountains" src="http://2.bp.blogspot.com/_M9LF5NrXkiQ/S8m2rDteeAI/AAAAAAAAAQ4/usSasF4CYLo/s400/marcas.jpg" />
       <ion-card-header>
         <ion-card-title>Cadastro de Produtos</ion-card-title>
-        <ion-card-subtitle>Para ser valido, favor preencher todos os campos.</ion-card-subtitle>
+        <ion-card-subtitle>Para o produto ser válido, favor preencher todos os campos.</ion-card-subtitle>
       </ion-card-header>
 
     </ion-card>
@@ -61,7 +61,7 @@
 
 <ion-grid>
   <ion-row>
-    <ion-button expand="full" (click)="salvar()"><u>Registrar</u></ion-button>
+    <ion-button expand="full" (click)="salvar()"><u class="btnRegistrar">Registrar</u></ion-button>
   </ion-row>
 </ion-grid>
 </ion-content>
