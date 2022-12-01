@@ -68,8 +68,7 @@ export class CadastroPage implements OnInit {
 
       this.route.navigateByUrl('/tabs/tab1');
     } else {
-      alert('Formulario Invalido');
+      alert('Formulario Inválido / Campo vazio');
     }
   }
-
 }

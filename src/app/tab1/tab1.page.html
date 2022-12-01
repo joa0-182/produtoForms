@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Produtos Cadastrados
     </ion-title>
       <ion-back-button><ion-icon name="add-outline"></ion-icon></ion-back-button>
   </ion-toolbar>
@@ -9,8 +9,8 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-button (click)="buscarProdutos()" color="dark" expand="block" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >
-    CADASTRAR NOVO PRODUTO
+  <ion-button (click)="buscarProdutos()" color="warning" expand="block" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >
+    Cadastrar Novo Produto
   </ion-button>
   <ion-item *ngFor="let produto of listaCadastros">
     <ion-label>

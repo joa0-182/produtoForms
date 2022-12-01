@@ -1,0 +1,23 @@
+.subtitle {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.974);
+}
+
+.nome {
+  margin: 15px 0;
+  text-align: center;
+}
+
+a {
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: dotted;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.242);
+  color: #000000;
+  font-size: 22px;
+  transition: 0.3s;
+}
