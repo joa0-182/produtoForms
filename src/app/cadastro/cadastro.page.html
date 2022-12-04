@@ -7,14 +7,16 @@
 <ion-content [fullscreen]="true">
 
   <ion-list>
+    <!--Card_Inicio-->
     <ion-card>
       <img alt="Silhouette of mountains" src="http://2.bp.blogspot.com/_M9LF5NrXkiQ/S8m2rDteeAI/AAAAAAAAAQ4/usSasF4CYLo/s400/marcas.jpg"/>
       <ion-card-header>
         <ion-card-title>Cadastro de Produtos</ion-card-title>
         <ion-card-subtitle>Para o produto ser válido, favor preencher todos os campos.</ion-card-subtitle>
       </ion-card-header>
-
     </ion-card>
+    <!--Card_Fim-->
+    <!--Item(Nome)-->
     <form [formGroup]="formCadastro">
       <ion-item>
         <ion-label position="floating">Nome:</ion-label>
@@ -25,7 +27,7 @@
           {{erro.aviso}}
         </span>
       </ng-container>
-      <!--fim-->
+      <!--Item(Descrição)-->
       <ion-item>
         <ion-label position="floating">Descrição:</ion-label>
         <ion-input formControlName="descricao"></ion-input>
@@ -35,7 +37,7 @@
           {{erro.aviso}}
         </span>
       </ng-container>
-      <!--fim-->
+      <!--Item(Validade)-->
       <ion-item counter="true" fill="clear">
         <ion-label position="floating">Validade:</ion-label>
         <ion-input type="date" placeholder="" formControlName="validade"></ion-input>
@@ -45,7 +47,7 @@
           {{erro.aviso}}
         </span>
       </ng-container>
-      <!--fim-->
+      <!--Item(Preço)-->
       <ion-item>
         <ion-label position="floating">Preço:</ion-label>
         <ion-input formControlName="preco"></ion-input>
@@ -55,13 +57,8 @@
           {{erro.aviso}}
         </span>
       </ng-container>
-      <!--fim-->
+      <!--Botão(Registrar)-->
+      <ion-button color="warning" slot="center" expand="full" (click)="salvar()"><u class="btnRegistrar">Registrar</u></ion-button>
     </form>
   </ion-list>
-
-<ion-grid>
-  <ion-row>
-    <ion-button color="warning" expand="full" (click)="salvar()"><u class="btnRegistrar">Registrar</u></ion-button>
-  </ion-row>
-</ion-grid>
 </ion-content>
